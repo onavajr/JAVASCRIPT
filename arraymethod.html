@@ -1,35 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <p id="demo"></p>
-        <p id="demo2"></p>
-        <p id="demo3"></p>
-        <p id="demo4"></p>
-        <p id="demo5"></p>
-        <p id="demo6"></p>
-        <p id="demo7"></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+        const name = ["Orlando", "Thirdy", "Crystal"];
+        document.getElementById("demo1").innerHTML = name;
+
+        name.splice(2, 0, "Arnold","Me","Evryone");
+        document.getElementById("demo2").innerHTML = name;
+    </script>
+    
+
+<!--
+    <script>
+        let arr1 = ["Orlando","Johny","Jayjay"];
+        let arr2 = ["Donald","Mickey","Rudolf"];
+        let arr3 = ["Dept","Arnold","Stallon"];
+        document.getElementById("demo").innerHTML = arr1.concat("<br>" + arr2, "<br>" + arr3);
+        document.getElementById("demo2").innerHTML = arr1.concat("Me");
+        document.getElementById("demo3").innerHTML = arr2.splice(2, 0, "Crystal", "Thirdy");
+    </script>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.toString();
+        document.getElementById("demo2").innerHTML = fruits.join(" ");
+        document.getElementById("demo3").innerHTML = fruits;
+        fruits.pop();
+        document.getElementById("demo3").innerHTML = fruits;
+        fruits.push("kiwi");
+        document.getElementById("demo4").innerHTML = fruits;
+        fruits.shift();
+        document.getElementById("demo5").innerHTML = fruits;
+    </script>
+    <script>
+        const fruta = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruta.shift();
+        document.getElementById("demo6").innerHTML = fruit;
+        document.getElementById("demo7").innerHTML = fruit;
+    </script>
+    <script>
+        let animals = ["Dog", "Cat", "Mouse"];
+        animals[0]= "Tiger";
+        document.getElementById("demo8").innerHTML = animals;
+        delete animals[0];
+        document.getElementById("demo10").innerHTML = animals;
+
+    </script>
+-->
 
 
-        <script>
-            const fruits = ["Banana", "Orange", "Apple", "Mango"];
-            document.getElementById("demo").innerHTML = fruits.toString();
-            document.getElementById("demo2").innerHTML = fruits.join(" ");
-            document.getElementById("demo3").innerHTML = fruits;
-            fruits.pop();
-            document.getElementById("demo3").innerHTML = fruits;
-            fruits.push("kiwi");
-            document.getElementById("demo4").innerHTML = fruits;
-            fruits.shift();
-            document.getElementById("demo5").innerHTML = fruits;
-        </script>
-        <script>
-            const fruta = ["Banana", "Orange", "Apple", "Mango"];
-            let fruit = fruta.shift();
-            document.getElementById("demo6").innerHTML = fruit;
-            document.getElementById("demo7").innerHTML = fruit;
-        </script>
-    </body>
+</body>
 </html>
