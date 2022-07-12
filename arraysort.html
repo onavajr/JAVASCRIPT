@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
     <p id="demo"></p>
@@ -16,6 +21,43 @@
     <p id="demo6"></p>
     <p id="demo7"></p>
 
+    <button onclick="anyFunction1()">Sort Alphabetically</button><br>
+    <button onclick="anyFunction2()">Sort Numerically</button><br>
+    <button onclick="anyFunction3()">Sort from high to low</button><br>
+    <button onclick="anyFunction4()">Randomize the number</button><br>
+
+    <script>
+        let points = [5,25,90,545,1];
+        document.getElementById("demo").innerHTML = "Original format" + "<br>" + points;
+        function anyFunction1(){
+            points.sort();
+            document.getElementById("demo1").innerHTML = "Sort Alphabetically" + "<br>" + points;
+        }
+
+        function anyFunction2(){
+            points.sort(function(a, b){return a - b});
+            document.getElementById("demo2").innerHTML = "Sort from low to high"+ "<br>" + points;
+            document.getElementById("demo6").innerHTML = "Lowest number is " + points[0];
+
+        }
+
+        function anyFunction3(){
+            points.sort(function(a,b){return b - a});
+            document.getElementById("demo3").innerHTML = points;
+            document.getElementById("demo5").innerHTML = "Highest number is " + points[0];
+
+        }
+
+        function anyFunction4(){
+            points.sort(function(a,b){return 0.5 - Math.random()});
+            document.getElementById("demo4").innerHTML = points;
+        }
+        document.getElementById("demo5").innerHTML = "This is Math.max.apply method "+ arrayMax(points);
+        function arrayMax(arr){
+            return Math.max.apply(null, arr);
+        }
+    </script>
+<!--
     <script>
         const fruits = ["Banana","Orange","Apple","Mango"];
         document.getElementById("demo").innerHTML = fruits;
@@ -35,5 +77,7 @@
         );
         document.getElementById("demo3").innerHTML = points;
     </script>
+
+-->
 </body>
 </html>
