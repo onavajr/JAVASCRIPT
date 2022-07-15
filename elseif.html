@@ -9,6 +9,7 @@
 <body>
     <p id="demo"></p>
     <p id="demo2"></p>
+    <p id="demo3"></p>
     <script>
         if(new Date().getHours()>18){
             document.getElementById("demo").innerHTML = "Good Evening";
@@ -25,5 +26,32 @@
 
         document.getElementById("demo2").innerHTML = greeting;
     </script>
+    <script>
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day = " To day is Sunday";
+                break;
+            case 1: 
+                day = " To day is Monday";
+                break;
+            case 2:
+                day = " To day is Tuesday";
+                break;
+            case 3:  
+                day = "  To day is  Wednesday";
+                break;
+            case 4:  
+                day = " To day is Thursday";
+                break;
+            case 5:  
+                day = " To day is Friday";
+                break;
+            default:
+                day = "Looking forward to the weekend";
+        }
+        document.getElementById("demo3").innerHTML = day;
+    </script>
+
 </body>
 </html>
