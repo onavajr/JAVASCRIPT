@@ -9,22 +9,40 @@
 <body>
     <h1>For loop</h1>
     <p id="demo"></p>
+    <h1>For in loop(loop through an object)</h1>
     <p id="demo2"></p>
     <script>
-        /*let text ="";
+        const person = {Name:"Orlando", Age:37, City:"San Jose"};
+        let text = "";
+        let x;
+        for (x in person){
+            text += person[x] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text + "<br>" + "hello";        /*let text ="";
         document.write(typeof text);
         const cars = ["Toyota","Honda","Nissan","Mitsubishi"];
         for(i = 0;i < cars.length;i++){
             text += cars[i] + "<br>";
             
         }
-        */
+        
         let i, len, text;
         const cars = ["Toyota","Honda","Nissan","Mitsubishi"];
         for(i = 0, len = cars.length, text="";i < len; i++){
             text += cars[i] + "<br>";
         }
         document.getElementById("demo").innerHTML = text;
+        */
     </script>
+    <script>
+        const numbers=[10,9,8,7,6,5,4,3,2,1,0];
+        let display = "";
+        for(num in numbers){
+            display += numbers[num] + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = display;
+    </script>
+
 </body>
 </html>
