@@ -11,7 +11,33 @@
     <p id="demo"></p>
     <h1>For in loop(loop through an object)</h1>
     <p id="demo2"></p>
+    <p id="demo3"></p>
     <script>
+        const cars = ["Volvo","Nissan","Toyota","Audi11"];
+        let text = "";
+        let i = 0;
+        while(cars[i]){
+            text += cars[i] + "<br>";
+            i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+    
+    <script>
+        const cars = ["Volvo","Nissan","Toyota","Audi"];
+        let text ="";
+        let i = 0;
+        for (;cars[i];){
+            text += cars[i] + "<br>";
+            i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+    <!-- 
+    <script>
+        /*
         const person = {Name:"Orlando", Age:37, City:"San Jose"};
         let text = "";
         let x;
@@ -43,6 +69,29 @@
         }
         document.getElementById("demo2").innerHTML = display;
     </script>
+    <script>
+        let numeric = "";
+        let i = 0;
+        while(i < 10){
+            numeric += i;
+            i++;
+        }
+
+        document.getElementById("demo3").innerHTML = numeric;
+    </script>
+    
+    <script>
+        let text = "";
+        let i = 0;
+        do {
+            text += "<br> The number is " + i;
+            i++;
+        }
+        while(i < 10);
+        document.getElementById("demo").innerHTML = text;
+
+</script>
+-->
 
 </body>
 </html>
