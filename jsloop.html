@@ -15,6 +15,31 @@
     <script>
         const cars = ["Volvo","Nissan","Toyota","Audi11"];
         let text = "";
+
+        list: {
+            text += cars[0] + "<br>";
+            text += cars[1] + "<br>";
+            break list;
+            text += cars[2] + "<br>";
+            text += cars[3] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <!-- 
+    <script>
+        let text = "";
+        for(i = 0; i < 9999; i++){
+            if(i === 9999){
+              break;  
+            }
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    
+    <script>
+        const cars = ["Volvo","Nissan","Toyota","Audi11"];
+        let text = "";
         let i = 0;
         while(cars[i]){
             text += cars[i] + "<br>";
@@ -35,7 +60,8 @@
         document.getElementById("demo").innerHTML = text;
 
     </script>
-    <!-- 
+    
+    
     <script>
         /*
         const person = {Name:"Orlando", Age:37, City:"San Jose"};
