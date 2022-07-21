@@ -13,6 +13,46 @@
     <p id="demo2"></p>
     <p id="demo3"></p>
     <script>
+        let text = "";
+        const fruits = new Map([
+            ["Apple", 500],
+            ["Banana", 300],
+            ["Oranges", 200],
+            ["Berries", 100]
+            ]);
+        for(const f of fruits){
+            text += f + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    
+    <!--
+    <script>
+        let pets = "";
+        const array = new Set(["Dog","Cat","Mouse"]);
+        for(const w of array){
+            pets += w + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = pets;
+    </script>
+    <script>
+        let text = "";
+        const name = "W3schools";
+        for(const x of name){
+            text += x + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <script>
+        let pets = "";
+        const array = ["Dog","Cat","Mouse"];
+        for(const y of array){
+            pets += y + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = pets;
+    </script>
+    <script>
         const cars = ["Volvo","Nissan","Toyota","Audi11"];
         let text = "";
 
@@ -25,7 +65,7 @@
         }
         document.getElementById("demo").innerHTML = text;
     </script>
-    <!-- 
+     
     <script>
         let text = "";
         for(i = 0; i < 9999; i++){
