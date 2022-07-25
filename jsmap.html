@@ -11,6 +11,7 @@
     <p id="demo2"></p>
     <p id="demo3"></p>
     <p id="demo4"></p>
+    <p id="demo5"></p>
 
     <script>
         const fruits = new Map([
@@ -22,18 +23,22 @@
         fruits.set("strawberry", 100);
         fruits.set("apples", 50);
         fruits.set("avocado", 10);
-        fruits.delete("apples");
+        fruits.delete("apples", 500);
         document.getElementById("demo").innerHTML = fruits.get("avocado");
         document.getElementById("demo2").innerHTML = fruits.size;
         document.getElementById("demo3").innerHTML = fruits.has("bananas");
 
         let text = "";
         fruits.forEach(function(value, key) {
-            text =+ key + ' is ' + value + "<br>"
+            text += key + ' is ' + value + "<br>"
         })
 
         document.getElementById("demo4").innerHTML = text;
 
+        for (const x of fruits.entries()){
+            text += x + "<br>";
+        }
+         document.getElementById("demo5").innerHTML = text;
     </script>
 </body>
 </html>
