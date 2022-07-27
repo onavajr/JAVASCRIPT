@@ -9,6 +9,7 @@
 <body>
     <p id="demo"></p>
     <p id="demo3"></p>
+    <p id="demo4"></p>
     <script>
         let y = "5";
         let x = + y;
@@ -17,9 +18,16 @@
     </script>
     <script>
         let l = 123;
-        document.getElementById("demo3").innerHTML = (l + 1) + "<br>" +
+        document.getElementById("demo3").innerHTML = String(l) + "<br>" +
         String(123) + "<br>" +
         String(100 + 23);
+    </script>
+    <script>
+        let u = 123;
+        document.getElementById("demo4").innerHTML = 
+        u.toString() + "<br>" + 
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
     </script>
 </body>
 </html>
