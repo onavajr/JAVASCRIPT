@@ -10,6 +10,7 @@
     <p id="demo"></p>
     <p id="demo3"></p>
     <p id="demo4"></p>
+    <!--
     <script>
         let y = "5";
         let x = + y;
@@ -22,12 +23,17 @@
         String(123) + "<br>" +
         String(100 + 23);
     </script>
+    
     <script>
-        let u = 123;
-        document.getElementById("demo4").innerHTML = 
-        u.toString() + "<br>" + 
-        (123).toString() + "<br>" +
-        (100 + 23).toString();
+        let u = 199.99;        document.getElementById("demo4").innerHTML = 
+        u.toFixed().toString() + "<br>" + u.constructor();
+    </script>
+    -->
+
+    <script>
+        let person = {firstname:"John", lastName:"Doe", age:50};
+        person = undefined;
+        document.getElementById("demo4").innerHTML = person;
     </script>
 </body>
 </html>
