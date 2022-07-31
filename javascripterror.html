@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter number from 5 to 10</p>
+    <input id="num" type="text">
+    <button onclick="myFunction()" type="button">Click Here</button>
+    <p id="error"></p>
+    <p id="demo6"></p>
+    <p id="demo8"></p>
+    <script>
+        function myFunction(){
+            const message = document.getElementById("error");
+            message.innerHTML = "";
+            let x = document.getElementById("num").value;
+            try {
+                if(x == "") throw "input text is empty";
+                if(isNaN(x)) throw "input text is not a number";
+                x = Number(x);
+                typeof x;
+                if(x < 5) throw "number should be greater than 5";
+                if(x > 10) throw "number should be lessthan 10";
+                if(x >= 5) throw "perfect";
+            }
+
+            catch(err) {
+                message.innerHTML = err;
+            }
+            finally {
+                document.getElementById("demo6").value = "";
+            }
+        }
+    </script>
+    <script>
+        "use strict";
+        try {
+            var x;
+            x = 3.14
+            document.getElementById("demo8").innerHTML = x;
+        }
+        catch (err){
+            document.getElementById("demo8").innerHTML = err;
+        }
+        
+    </script>
+
+</body>
+</html>
