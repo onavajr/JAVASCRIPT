@@ -7,30 +7,63 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="demo"></p>
+  <p id="demo"></p>
+  <button onclick="myFunction()">Try it</button>
+  <p id="demo2">Please Visit Microsoft</p>
+  <p id="demo3"></p>
+  <P id="demo4"></P>
+  <p id="demo5"></p>
+  <p id="search">This is a test to search for desame word</p>
+  <p id="word2">This is a to earch for letter e on this paragraph</p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo7"></p>
+  <p id="demo7"></p>
+  <p id="demo7"></p>
+  <p id="demo7"></p>
+  
+  <script>
+    let text = "Visit W3schools!";
+    let n = text.search(/W3Schools/i);
+    document.getElementById("demo").innerHTML = n;
+  </script>
 
-<script>
-let text = "Visit W3Schools!"; 
-let n = text.search(/w3Schools/i);
-document.getElementById("demo").innerHTML = n;
-</script>
-
-<script>
-    function myFunction() {
-      const message = document.getElementById("p01");
-      message.innerHTML = "";
-      let x = document.getElementById("demo").value;
-      try {
-        if(x == "") throw "empty";
-        if(isNaN(x)) throw "not a number";
-        x = Number(x);
-        if(x < 5) throw "too low";
-        if(x > 10) throw "too high";
-      }
-      catch(err) {
-        message.innerHTML = "Input is " + err;
-      }
+  <script>
+    function myFunction(){
+      let text = document.getElementById("demo2").innerHTML;
+      document.getElementById("demo2").innerHTML = text.replace(/microsoft/i, "W3shools");
     }
-    </script>
+  </script>
+
+  <script>
+    let word = "Visit W3Schools Visit W3SchoolsVisit W3SchoolsVisit W3Schools";
+    let result = word.match(/W3Schools/i);
+    document.getElementById("demo3").innerHTML = result;
+  </script>
+
+  <script>
+    let another_word = document.getElementById("search").innerHTML;
+    let result2 = another_word.match(/test/g);
+    document.getElementById("demo4").innerHTML = result2;
+  </script>
+  <script>
+    try {
+    let text2 = document.getElementById("word2").innerHTML;
+    const pattern = /e/;
+    document.getElementById("demo6").innerHTML = patter.test(text2);
+    }
+
+    catch(err) {
+      document.getElementById("demo8").innerHTML = err;
+    }
+  </script>
+
+  <script>
+    try {addlert("Welcome guest!")}
+    catch(err){
+      document.getElementById("demo7").innerHTML = err + " this is the error message";
+    }
+  </script>
 </body>
 </html>
