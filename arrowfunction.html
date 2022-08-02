@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    
+    <button id="btn">click here</button>
+    <button id="btn2">click here btn2</button>
+
+
+
+    <script>
+        //before
+        var hello;
+
+        hello = function(){
+            return "Hello World!";
+        }
+
+        document.getElementById("demo").innerHTML = hello();
+
+    </script>
+    <script>
+        //arrow function
+        var hello;
+
+        hello = () => {
+            return "hello world!";
+        }
+
+        document.getElementById("demo1").innerHTML = hello();
+    </script>
+    <script>
+        var hello;
+        hello = () => "Hello World!!!";
+        document.getElementById("demo2").innerHTML = hello();
+    </script>
+    <script>
+        var hello;
+        hello = (val) => "Hello" + val;
+        document.getElementById("demo3").innerHTML = hello("World :)");
+    </script>
+    <script>
+        var hello;
+        hello = val => "Hello" + val;
+        document.getElementById("demo4").innerHTML= hello("World ;)")
+    </script>
+    <script>
+        var hello;
+        hello = function(){
+            document.getElementById("demo5").innerHTML += this;
+        }
+        window.addEventListener("load", hello);
+        document.getElementById("btn").addEventListener("click", hello);
+    </script>
+    <script>
+        var hello;
+        hello = () => {
+            document.getElementById("demo6").innerHTML += this;
+        }
+        window.addEventListener("load", hello);
+        document.getElementById("btn2").addEventListener("click", hello);
+    </script>
+</body>
+</html>
