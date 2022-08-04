@@ -10,6 +10,49 @@
     <p id="demo"></p> <br>
     <p id="error"></p>
     <script>
+        class Car {
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+            age(x){
+                return x - this.year;
+            }
+        }
+        try {
+        let myCar = new Car("Ford", 2014);
+        let date = new Date();
+        let year = date.getFullYear();
+        document.getElementById("demo").innerHTML = "The age of my car is " + myCar.age(year) + " years old."
+        }
+
+        catch(err){document.getElementById("error").innerHTML = err;}
+       
+    </script>
+    
+    <!--
+        <script>
+        class Car {
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        try {
+            let myCar = new Car("Ford", 2004);
+        document.getElementById("demo").innerHTML = "The age of my car is " + myCar.age() + ".";
+        }
+
+        catch(err) {
+            document.getElementById("error").innerHTML = err;
+        }
+        
+    </script>
+    <script>
         
             class Car {
             constructor(name, year){
@@ -33,5 +76,6 @@
             
        
     </script>
+    -->
 </body>
 </html>
