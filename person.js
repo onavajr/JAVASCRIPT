@@ -1,4 +1,5 @@
-export name = "jesse";
-export age = 40;
 
-export {name,age};
+const name = "jesse";
+const age = 40;
+
+export {name, age};

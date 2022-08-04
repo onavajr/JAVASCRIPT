@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
-<body>
+<body></body>
+    <p id="demo"></p>
+    <script type="module">
+        import message from "./message.js";
+        document.getElementById("demo").innerHTML = message();
+    </script>
+    <!--
+        <script type="module">
+        import{name,age} from "./person.js";
+        let text = "Hello " + name +" "+ age + " test.";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    -->
+    
     
 </body>
 </html>
