@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+  <script>
+    const person = {
+        name: "John ",
+        age: 30,
+        city: " New York",
+        luckynumber: function() {return 27}
+    };
+    let text = "";
+    for (let x in person){
+        text += person[x] + " ";
+    };
+
+    person.luckynumber = person.luckynumber.toString();
+    document.getElementById("demo").innerHTML = text;
+    const myArray = Object.values(person);
+    document.getElementById("demo2").innerHTML = myArray;
+    document.getElementById("demo3").innerHTML = JSON.stringify(person);
+    // document.getElementById("demo").innerHTML =
+    // "My name is " + person.name + ", " + "I'm age " + person.age +
+    // ", " + "My City is "+ person.city;
+  </script>
+</body>
+</html>
