@@ -9,6 +9,7 @@
 <body>
     <p id="demo"></p>
     <p id="demo2"></p>
+    <p id="demo3"></p>
     <script>
         const person = {
             firstName: "John",
@@ -28,11 +29,15 @@
             language: "",
             set toString(name) {
                 this.firstName = name;
+            },
+            get surName() {
+                return this.firstName.toUpperCase();
             }
         };
 
         person2.firstName = "Chris";
-        document.getElementById("demo2").innerHTML = person2.firstName;
+        document.getElementById("demo2").innerHTML = typeof firstName;
+        document.getElementById("demo3").innerHTML = person2.surName;
     </script>
 </body>
 </html>
