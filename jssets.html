@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const letter = new Set(["A", "b", "C"]);
+        letter.add("d");
+        document.getElementById("demo").innerHTML = letter.size;
+    </script>
+    <script>
+        const words = new Set();
+        const a = "a";
+        const b = "b";
+        const c = "c";
+
+        words.add(a);
+        words.add(b);
+        words.add(c);
+
+        document.getElementById("demo2").innerHTML = words.size;
+    </script>
+</body>
+</html>
