@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    
+
+    
+    <script>
+        function addNumber(a, b) {
+            return a * b;
+        }
+
+        document.getElementById("demo").innerHTML = addNumber(2,4);
+    </script>
+    <script>
+        let x = myFunction();
+        function myFunction(){
+            return this;
+        }
+
+        document.getElementById("demo2").innerHTML = x;
+    </script>
+    <script>
+        let person = {
+            firstName:"John",
+            lastName:"Doe",
+            fullName: function(){
+                return this.firstName + " " + this.lastName + "<br>" + this;
+            }
+        };
+        document.getElementById("demo3").innerHTML = person.fullName();
+    </script>
+    <script>
+        function sampleName(arg1, arg2){
+            this.firstName = arg1;
+            this.lastName = arg2;
+        };
+
+        const myObjct = new sampleName("John","Doe");
+        document.getElementById("demo4").innerHTML = myObjct.firstName + " " + myObjct.lastName;
+    </script>
+</body>
+</html>
