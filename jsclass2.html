@@ -8,6 +8,7 @@
 </head>
 <body>
     <p id="demo"></p>
+    <p id="demo2"></p>
     <script>
         class Car {
             constructor(name, year){
@@ -16,8 +17,11 @@
             }
         }
 
-        const myCar = new Car("Ford", 2014);
-        document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year;
+        const myCar1 = new Car("Ford", 2014);
+        const myCar2 = new Car("Audi", 2019);
+        document.getElementById("demo").innerHTML = myCar1.name + " " + myCar1.year;
+        document.getElementById("demo2").innerHTML = myCar2.name + " " + myCar2.year;
+
     </script>
 </body>
 </html>
