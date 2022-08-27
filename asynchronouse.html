@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo4"></p>
+    <script>
+        function myDisplayer(something){
+            document.getElementById("demo").innerHTML = something;
+        }
+
+        function myCalculator(num1, num2, myCallback){
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5 , 5, myDisplayer);
+    </script>
+    <script>
+        setTimeout(myFunction, 3000);
+        function myFunction(){
+            document.getElementById("demo2").innerHTML = "I love you";
+        }
+       
+    </script>
+    <script>
+        setTimeout(function(){myFunction("I love you!!!");},300);
+        function myFunction(value){
+            document.getElementById("demo4").innerHTML = value;
+        }
+    </script>
+</body>
+</html>
