@@ -11,6 +11,7 @@
     <p id="demo2"></p>
     <p id="demo4"></p>
     <p id="demo5"></p>
+    <p id="demo6"></p>
 
     <script>
         function myDisplayer(something){
@@ -47,6 +48,26 @@
             d.getSeconds()
             ;
         }
+    </script>
+    <script>
+        function myFunction(trial){
+            document.getElementById("demo6").innerHTML = trial; 
+        }
+        function getFile(myCallback){
+            let req = new XMLHttpRequest();
+            req.open('GET', "mycar.html");
+            req.onload = function(){
+                if(req.status == 200){
+                    myCallback(this.responseText);
+                }else{
+                    myCallback("Error: " + req.status);
+                }
+            }
+            req.send();
+        }
+
+    getFile(myDisplayer);
+
     </script>
 </body>
 </html>

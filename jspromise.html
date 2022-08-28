@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function myDisplayer(some){
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        let myPromise = new Promise(function(myResolve, myReject) {
+            let x = 1;
+            if(x == 0){         
+                myResolve("OK");
+            }else{
+                myReject("Error");
+            }
+        });
+        myPromise.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+    </script>
+    <script>
+        setTimeout(function(){ myFunction("I love You !!!"); }, 3000);
+        function myFunction(value){
+            document.getElementById("demo2").innerHTML = value;
+        }
+    </script>
+    <script>
+        const myPromise2 = new Promise(function(myResolve, myReject){
+            setTimeout(function(){ myResolve("I love you !!"); }, 3000);
+        });
+
+        myPromise2.then(function(value){
+            document.getElementById("demo3").innerHTML = value;
+        });
+    </script>
+</body>
+</html>
