@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function myDisplay(some){
+            document.getElementById("demo").innerHTML = some;
+        };
+
+        async function myFunction(){return "HELLO";}
+        myFunction().then(
+            function(value) {myDisplay(value);},
+            function(error) {myDisplay(error);}
+        );
+    </script>
+    <script>
+        async function myDisplay(){
+            let myPromise = new Promise(function(resolve, reject){
+                resolve("I love you!!");
+            });
+            document.getElementById("demo2").innerHTML = await myPromise;
+        }
+
+        myDisplay();
+    </script>
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function(resolve){
+                setTimeout(function(){resolve("I love you");}, 3000);
+            });
+            document.getElementById("demo3").innerHTML = await myPromise;
+        }
+        myDisplay();
+    </script>
+</body>
+</html>
