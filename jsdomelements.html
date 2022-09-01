@@ -8,11 +8,10 @@
 </head>
 <body>
     <p id="demo"></p>
+    <p id = "intro">HELOO</p>
     <script>
-        document.getElementById("demo").innerHTML = "Hello World";
-    </script>
-    <script>
-       document.createElement(<p>hello</p>);
+        const element = document.getElementById("intro");
+         document.getElementById("demo").innerHTML = "THE text from the intro paraghrap is: " + element.innerHTML;
     </script>
 </body>
 </html>
