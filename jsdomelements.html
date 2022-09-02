@@ -7,11 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="demo"></p>
-    <p id = "intro">HELOO</p>
+    <p>Hello me</p>
+    <p>Ahahaha</p>
+    <h1 id="demo"></h1>
+    <h1 id = "intro">HELOO</h1>
+    <h1 id="demo2"></h1>
+    <h1 id="demo3"></h1>
+    <form id="frm1" action="/arraymethod.html">
+        First Name: <input type="text" name="fname" value="hello"><br><br>
+        Last Name: <input type="text" name="lname" value="hi"><br><br>
+        <input type="submit" value="Submit"><br>
+    </form>
     <script>
         const element = document.getElementById("intro");
          document.getElementById("demo").innerHTML = "THE text from the intro paraghrap is: " + element.innerHTML;
+    </script>
+    <script>
+        const element2 = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML = 'The text in first paragraph is: ' + element2[1].innerHTML;
+    </script>
+    <script>
+        const x = document.forms["frm1"];
+        let text = "";
+        for(let i = 0; i < x.length ;i++){
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text;
     </script>
 </body>
 </html>
