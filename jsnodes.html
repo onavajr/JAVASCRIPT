@@ -8,14 +8,42 @@
 <div id="div1">
 <p id="p1">This is a paragraph.</p>
 <p id="p2">This is another paragraph.</p>
+<!-- <button type="button" onclick="removeELement()">Remove Paragraph</button>
+<button type="button" onclick="removeElement2()">Buton 2</button> -->
+<button type="button" onclick="replaceWord()">Click here to replace</button>
 </div>
 
-<script>
+<!-- <script>
 const para = document.createElement("p");
 const node = document.createTextNode("This is new.");
 para.appendChild(node);
 const element = document.getElementById("div1");
 element.appendChild(para);
+</script>
+
+<script>
+    function removeElement(){
+        document.getElementById("p1").remove();
+    }
+</script>
+<script>
+    const parent = document.getElementById("div1");
+    const child = document.getElementById("p1");
+    function removeElement2(){
+        parent.removeChild(child);
+    }
+</script> -->
+<script>
+    const parent = document.getElementById("div1");
+    const child = document.getElementById("p1");
+    const para = document.createElement("p");
+    const node = document.createTextNode("This is New");
+    function replaceWord(){
+        para.appendChild(node);
+        parent.replaceChild(para, child);
+
+    }
+
 </script>
 
 </body>
