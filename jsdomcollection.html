@@ -15,7 +15,10 @@
     <button type="button" onclick="returnColor()">Change to blue</button>
 
     <script>
-        let para = document.getElementsByTagName("p");
+  
+  
+  let para = document.getElementsByTagName("p");
+  
         document.getElementById("sentence").innerHTML = "This is the second 'p' :" + para[1].innerHTML;
         document.getElementById("count").innerHTML = "The number of paragraph on this document is " + para.length;
 
@@ -23,13 +26,18 @@
             for(let i = 0; i < para.length; i++){
                 para[i].style.color = "yellow";
             }
-        }
+        };
         
-        function returnColor(){
-            for(let x = 0;x < para.length; i++){
-                para[x].style.color = "blue";
+
+    </script>
+    <script>
+
+                function returnColor(){
+                    let word = document.getElementsByTagName("p");
+            for(let x = 0; x < word.length; i++){
+                word[x].style.color = "blue";
             }
-        }
+        };
     </script>
 </body>
 </html>
