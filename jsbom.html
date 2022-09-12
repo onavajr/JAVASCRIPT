@@ -8,9 +8,40 @@
 </head>
 <body>
     <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p>The window.location object assign</p>
+    <input type="button" value="Submit" onclick="newDoc()">
+    <script>
+        function newDoc(){
+            window.location.assign("https://google.com");
+        };
+    </script>
     <script>
         document.getElementById("demo").innerHTML =
         "Window size with " + window.innerWidth + "and the hegiht is " + window.innerHeight;
+    </script>
+    <script>
+        document.getElementById("demo2").innerHTML = "The color dept of this computer is " + window.screen.colorDepth;
+    </script>
+    <script>
+        document.getElementById("demo3").innerHTML = "THe pixel dept is " + screen.pixelDepth;
+    </script>
+    <script>
+        document.getElementById("demo4").innerHTML = "The page location is " + location.href;
+    </script>
+    <script>
+        document.getElementById("demo5").innerHTML = "The page host is " + location.hostname;
+    </script>
+    <script>
+        document.getElementById("demo6").innerHTML = "The page filepath is " + location.pathname;
+    </script>
+    <script>
+        document.getElementById("demo7").innerHTML = "The page port is " + location.port;
     </script>
 </body>
 </html>
