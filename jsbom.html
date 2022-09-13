@@ -16,6 +16,9 @@
     <p id="demo7"></p>
     <p>The window.location object assign</p>
     <input type="button" value="Submit" onclick="newDoc()">
+    <button type="button" onclick="myFunction()">Back</button>
+    <button type="button" onclick="goBack()">Back</button>
+
     <script>
         function newDoc(){
             window.location.assign("https://google.com");
@@ -42,6 +45,16 @@
     </script>
     <script>
         document.getElementById("demo7").innerHTML = "The page port is " + location.port;
+    </script>
+    <script>
+        function myFunction(){
+            window.history.forward();
+        }
+    </script>
+    <script>
+        function goBack(){
+            window.history.back();
+        }
     </script>
 </body>
 </html>
