@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Access a JavaScript Object</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+
+    <script>
+        const myObjct = {name:"John", age:30, city:"New York"};
+        document.getElementById("demo").innerHTML = myObjct.name;
+
+        document.getElementById("demo2").innerHTML = myObjct["name"];
+        myObjct.name = "Orlando";
+        document.getElementById("demo3").innerHTML = myObjct.name;
+    </script>
+</body>
+</html>
