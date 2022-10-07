@@ -10,25 +10,16 @@
     <h1>Access a JavaScript Object</h1>
     <p id="demo"></p>
     <p id="demo2"></p>
-    <p id="demo3"></p>
-    <p id="demo4"></p>
-    <p id="demo5"></p>
-    <script>
-        const myObjct = {name:"John", age:30, city:"New York"};
-        document.getElementById("demo").innerHTML = myObjct.name;
 
-        document.getElementById("demo2").innerHTML = myObjct["name"];
-        myObjct.name = "Orlando";
-        document.getElementById("demo3").innerHTML = myObjct.name;
-
-        const myJSON = JSON.stringify(myObjct);
-        document.getElementById("demo5").innerHTML = myJSON;
-    </script>
     <script>
         const txt = '{"name":"John", "age":30, "city":"New York"}'
         const obj = JSON.parse(txt);
-        document.getElementById("demo4").innerHTML = obj.age + obj.name + obj.city;
+        document.getElementById("demo1").innerHTML = obj.age + obj.name + obj.city;
     </script>
-
+    <script>
+        const objt = {name: "John", today: new Date(), city: "New York"};
+        const myJSON = JSON.stringify(objt);
+        document.getElementById("demo").innerHTML = myJSON;
+        </script>
 </body>
 </html>
