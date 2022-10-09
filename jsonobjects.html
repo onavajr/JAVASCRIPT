@@ -9,6 +9,7 @@
 <body>
     <h1>Looping Object Properties</h1>
     <p id="demo"></p>
+    <p id="demo2"></p>
     <script>
         const myJSON = '{"name":"John", "age":30, "car":null}';
         const myObj = JSON.parse(myJSON);
@@ -19,6 +20,16 @@
         }
 
         document.getElementById("demo").innerHTML = txt;
+    </script>
+    <script>
+        const JSON2 = '{"name":"Orlando","age":37, "car":["FORD", "BMW", "TOYOTA"]}';
+        const myObj2 = JSON.parse(JSON2);
+
+        let text = "";
+        for (let i in myObj2.car) {
+            text += myObj2.car[i] + " ";
+        }
+        document.getElementById("demo2").innerHTML = text;
     </script>
 
 
