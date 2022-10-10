@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        //JSON server Sending Data
+        const myObj = { name: "John", age: 31, city: "New York"};
+        const myJSON = JSON.stringify(myObj);
+        window.location = "demo_json.php?x=" + myJSON;
+    </script>
+
+    <script>
+        //JSON server Receiving Data
+        const myJSON = '{"name":"John", "age":31, "city":"New York"}';
+        const myObj = JSON.parse(myJSON);
+        document.getElementById("demo").innerHTML = myObj;
+    </script>
+    <script>
+        //JSON from a server
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function(){
+            const myObj = JSON.parse(this.responseText);
+            document.getElementById("demo2").innerHTML = myObj.name;
+        }
+        xmlhttp.open("GET", "json_demo.txt");
+        xmlhttp.send();
+    </script>
+    <script>
+        //Array as JSON
+        const xmlhttp = XMLHttpRequest();
+        xmlhttp.onload = function(){
+            const myArr = JSON.parse(this.responseText);
+            document.getElementById("demo3").innerHTML = myArr[0];
+        }
+        xmlhttp.open("GET", "json_demo_array.txt", true);
+        xmlhttp.send();
+    </script>
+</body>
+</html>
