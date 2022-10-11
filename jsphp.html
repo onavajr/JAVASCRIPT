@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //THE CLIEN JAVASCRIPT PHP ACCESS
+        const xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.load = function(){
+            const myObj = JSON.parse(this.responseText);
+            document.getElementById("demo").innerHTML = myObj.name;
+
+        }
+        xmlhttp.pen("GET", "demo_file.php");
+        xmlhttp.send();
+    </script>
+
+    <script>
+        //PHP Database
+        //JSON received from the PHP Server
+        const limit = {"limit":10};
+        const dbParam = JSON.stringify(limit);
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function(){
+            document.getElementById().innerHTML = this.responseText;
+        }
+        xmlhttp.open("GET","json_demo_db.php?x=" + dbParam);
+        xmlhttp.send();
+    </script>
+    <script>
+        //USE DATA(dis play data)
+        const limit = {"limit":10};
+        const dbParam = JSON.stringify(limit);
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.load = function () {
+            myObj = JSON.parse(this.responseText);
+            let text = "";
+            for (let x in myObj){
+                text += myObj[x].name + "<br>";
+            }
+            document.getElementById("demo3").innerHTML = text;
+        };
+
+        xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam);
+        xmlhttp.send();
+
+    </script>
+
+</body>
+</html>
