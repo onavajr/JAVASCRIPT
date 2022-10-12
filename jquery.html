@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>FInding HTML Elements by ID</h2>
+    <p id="id01">Hello World!</p>
+<p id="id02">Hello Sweden!</p>
+<p id="id03">Hello Japan!</p>
+
+<p id="demo"></p>
+
+<script>
+$(document).ready(function() {
+  var myElements = $("#id01");
+  $("#demo").text("The text from the id01 paragraph is: " + myElements[0].innerHTML);
+});
+</script>
+
+</body>
+</html>
