@@ -13,12 +13,19 @@
 <p id="id03">Hello Japan!</p>
 
 <p id="demo"></p>
+<p id="demo4"></p>
 
-<script>
+<!-- <script>
 $(document).ready(function() {
   var myElements = $("#id01");
   $("#demo").text("The text from the id01 paragraph is: " + myElements[0].innerHTML);
 });
+</script> -->
+<script>
+  $(document).ready(function() {
+    var myElements = $("p");
+    $d("demo4").text("The text in the first paragraph is: " + myElements[0].innerHTML);
+  });
 </script>
 
 </body>
